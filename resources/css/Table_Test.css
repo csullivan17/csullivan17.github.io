@@ -96,4 +96,7 @@ button {
   height: 2rem;
   font-family: monospace;
   font-weight: bold;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid black;
 }

@@ -1,5 +1,5 @@
-function changerecord(matchup, gameIndex, WLT, pID, opponent, oppWLT, opppID){
-  var recordletter = document.getElementsByClassName(matchup)[gameIndex];
+function changerecord(matchup, WLT, pID, opponent, oppWLT, opppID){
+  var recordletter = document.getElementById(matchup);
   var opponentletter = document.getElementById(opponent);
   var recordW = document.getElementsByClassName(WLT)[0];
   var recordL = document.getElementsByClassName(WLT)[1];
@@ -24,6 +24,8 @@ function changerecord(matchup, gameIndex, WLT, pID, opponent, oppWLT, opppID){
     wins-=1;
     oppwins+=1;
     opplosses-=1;
+    recordletter.style.backgroundColor = '#E78587';
+    opponentletter.style.backgroundColor = '#85E787';
   } else if(recordletter.innerText == "L"){
     recordletter.innerText = "T";
     opponentletter.innerText = "T";
@@ -31,11 +33,15 @@ function changerecord(matchup, gameIndex, WLT, pID, opponent, oppWLT, opppID){
     losses-=1;
     oppties+=1;
     oppwins-=1;
+    recordletter.style.backgroundColor = '#B7B7B7';
+    opponentletter.style.backgroundColor = '#B7B7B7';
   } else if(recordletter.innerText == "Change"){
     recordletter.innerText = "W";
     opponentletter.innerText = "L";
     wins+=1;
     opplosses+=1;
+    recordletter.style.backgroundColor = '#85E787';
+    opponentletter.style.backgroundColor = '#E78587';
   } else {
     recordletter.innerText = "W";
     opponentletter.innerText = "L";
@@ -43,6 +49,8 @@ function changerecord(matchup, gameIndex, WLT, pID, opponent, oppWLT, opppID){
     ties-=1;
     opplosses+=1;
     oppties-=1;
+    recordletter.style.backgroundColor = '#85E787';
+    opponentletter.style.backgroundColor = '#E78587';
   }
   recordW.innerText = wins;
   recordL.innerText = losses;
