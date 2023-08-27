@@ -79,12 +79,15 @@ function sortTable(type, colIndex) {
       if(type=="word" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
         shouldSwitch = true;
         break;
-      } else if (type=="num" && parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+      } else if (type=="num" && parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
         shouldSwitch = true;
         break;
       }
     }
-    if(shouldSwitch) {
+    if(type=="word" && shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    } else {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
     }
