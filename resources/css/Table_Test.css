@@ -1,0 +1,99 @@
+html {
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+.sort_button {
+  background: none;
+  cursor: pointer;
+}
+
+.record {
+  float: left;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+    top: 0;
+}
+
+.nav-option {
+  float: left;
+  border-right: 1px solid #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-option {
+    float: none;
+    width: 100%;
+  }
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 24px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #111;
+}
+
+.row {
+  margin: 0px 10px 0px 10px;
+}
+
+.row h2 {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+img {
+  width: 5rem;
+}
+
+.record {
+  align-self: ;
+}
+
+button {
+  width: 5rem;
+  height: 2rem;
+  font-family: monospace;
+  font-weight: bold;
+}
