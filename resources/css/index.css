@@ -14,17 +14,6 @@ table {
 
 th, td {
   border: 1px solid black;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.sort_button {
-  background: none;
-  cursor: pointer;
-}
-
-.record {
-  float: left;
 }
 
 .navbar {
@@ -52,7 +41,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 24px;
+  padding: 12px 20px;
   text-decoration: none;
 }
 
@@ -85,20 +74,20 @@ a:hover {
   }
 }
 
-img {
-  width: 5rem;
+#headshot, #intro {
+  display: flex;
+  flex-basis: 10%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
 }
 
-.record {
-  align-self: ;
+.pic {
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 40px;
 }
 
-button {
-  width: 5rem;
-  height: 2rem;
-  font-family: monospace;
-  font-weight: bold;
-  background-color: white;
-  border-radius: 3px;
-  border: 1px solid black;
+#intro {
+  padding: 0px 50px 0px 50px;
 }
