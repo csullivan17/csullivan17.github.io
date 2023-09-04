@@ -1,3 +1,7 @@
+html {
+  font-family: monospace;
+}
+
 body {
   margin: 0;
 }
@@ -68,4 +72,22 @@ a:hover {
   .column {
     width: 100%;
   }
+}
+
+#headshot, #intro {
+  display: flex;
+  flex-basis: 10%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.pic {
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 40px;
+}
+
+#intro {
+  padding: 0px 50px 0px 50px;
 }
