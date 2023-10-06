@@ -11,8 +11,8 @@
   <nav>
     <ul class="navbar">
       <li class="nav-option"><a href="index.html">Home</a></li>
-      <li class="nav-option"><a href="blog.html">Blog</a></li>
-      <li class="nav-option"><a href="store.html">Store</a></li>
+<!--      <li class="nav-option"><a href="blog.html">Blog</a></li>
+      <li class="nav-option"><a href="store.html">Store</a></li> -->
       <li class="nav-option"><a href="soccer_table.html">SEC Soccer Standings</a></li>
     </ul>
   </nav>
@@ -21,11 +21,14 @@
 <body>
   <div class="row">
       <h2>SEC Soccer Standings</h2>
+      <p class="description">Still a work in progress!</p>
+      <p class="description">Working on calculating max points possible, slimming down the code, and eventually adding some sort of predictive model.</p>
       <table id="soccerTable">
         <tr>
           <th><button class="sort_button" id="name" onclick="sortTable('word',0)">Team</button></th>
           <th>Record</th>
           <th><button class="sort_button" id="rank" onclick="sortTable('num',2)">Points</button></th>
+          <th><button class="sort_button" id="max_points" onclick="sortTable('num',3)">Maximum Possible Points</button></th>
           <th>Goals For-Against</th>
           <th>Game 1</th>
           <th>Game 2</th>
@@ -39,9 +42,10 @@
           <th>Game 10</th>
         </tr>
         <tr>
-          <td>Alabama</td>
+          <td><a href="https://rolltide.com/sports/womens-soccer/schedule/2023">Alabama</a></td>
           <td><p class="UAWLT record">0</p><p class="record">-</p><p class="UAWLT record">0</p><p class="record">-</p><p class="UAWLT record">0</p></td>
           <td id="UAP">0</td>
+          <td id="UAMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/georgia.png"><br><button class="UArecord" id="UAGA" type="button" onclick="changerecord('UAGA','UAWLT','UAP','GAUA','GAWLT','GAP')">Change</button><label>Georgia</label></td>
           <td><img src="resources/images/arkansas.png"><br><button class="UArecord" id="UAAR" type="button" onclick="changerecord('UAAR','UAWLT','UAP','ARUA','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
@@ -55,9 +59,10 @@
           <td><img src="resources/images/missouri.png"><br><button class="UArecord" id="UAMO" type="button" onclick="changerecord('UAMO','UAWLT','UAP','MOUA','MOWLT','MOP')">Change</button><label>Missouri</label></td>
         </tr>
         <tr>
-          <td>Arkansas</td>
+          <td><a href="https://arkansasrazorbacks.com/sport/w-soccer/schedule/">Arkansas</a></td>
           <td><p class="ARWLT record">0</p><p class="record">-</p><p class="ARWLT record">0</p><p class="record">-</p><p class="ARWLT record">0</p></td>
           <td id="ARP">0</td>
+          <td id="ARMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/tennessee.png"><br><button class="ARrecord" id="ARUT" type="button" onclick="changerecord('ARUT','ARWLT','ARP','UTAR','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
           <td><img src="resources/images/alabama.png"><br><button class="ARrecord" id="ARUA" type="button" onclick="changerecord('ARUA','ARWLT','ARP','UAAR','UAWLT','UAP')">Change</button><label>Alabama</label></td>
@@ -71,9 +76,10 @@
           <td><img src="resources/images/mississippi_state.png"><br><button class="ARrecord" id="ARMT" type="button" onclick="changerecord('ARMT','ARWLT','ARP','MTAR','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
         </tr>
         <tr>
-          <td>Auburn</td>
+          <td><a href="https://auburntigers.com/sports/womens-soccer/schedule/2023">Auburn</a></td>
           <td><p class="AUWLT record">0</p><p class="record">-</p><p class="AUWLT record">0</p><p class="record">-</p><p class="AUWLT record">0</p></td>
           <td id="AUP">0</td>
+          <td id="AUMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/mississippi_state.png"><br><button class="AUrecord" id="AUMT" type="button" onclick="changerecord('AUMT','AUWLT','AUP','MTAU','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
           <td><img src="resources/images/missouri.png"><br><button class="AUrecord" id="AUMO" type="button" onclick="changerecord('AUMO','AUWLT','AUP','MOAU','MOWLT','MOP')">Change</button><label>Missouri</label></td>
@@ -87,9 +93,10 @@
           <td><img src="resources/images/georgia.png"><br><button class="AUrecord" id="AUGA" type="button" onclick="changerecord('AUGA','AUWLT','AUP','GAAU','GAWLT','GAP')">Change</button><label>Georgia</label></td>
         </tr>
         <tr>
-          <td>Florida</td>
+          <td><a href="https://floridagators.com/sports/womens-soccer/schedule/2023">Florida</a></td>
           <td><p class="UFWLT record">0</p><p class="record">-</p><p class="UFWLT record">0</p><p class="record">-</p><p class="UFWLT record">0</p></td>
           <td id="UFP">0</td>
+          <td id="UFMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/missouri.png"><br><button class="UFrecord" id="UFMO" type="button" onclick="changerecord('UFMO','UFWLT','UFP','MOUF','MOWLT','MOP')">Change</button><label>Missouri</label></td>
           <td><img src="resources/images/tennessee.png"><br><button class="UFrecord" id="UFUT" type="button" onclick="changerecord('UFUT','UFWLT','UFP','UTUF','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
@@ -103,9 +110,10 @@
           <td><img src="resources/images/south_carolina.png"><br><button class="UFrecord" id="UFSC" type="button" onclick="changerecord('UFSC','UFWLT','UFP','SCUF','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
         </tr>
         <tr>
-          <td>Georgia</td>
+          <td><a href="https://georgiadogs.com/sports/womens-soccer/schedule">Georgia</a></td>
           <td><p class="GAWLT record">0</p><p class="record">-</p><p class="GAWLT record">0</p><p class="record">-</p><p class="GAWLT record">0</p></td>
           <td id="GAP">0</td>
+          <td id="GAMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/alabama.png"><br><button class="GArecord" id="GAUA" type="button" onclick="changerecord('GAUA','GAWLT','GAP','UAGA','UAWLT','UAP')">Change</button><label>Alabama</label></td>
           <td><img src="resources/images/lsu.png"><br><button class="GArecord" id="GALS" type="button" onclick="changerecord('GALS','GAWLT','GAP','LSGA','LSWLT','LSP')">Change</button><label>LSU</label></td>
@@ -119,9 +127,10 @@
           <td><img src="resources/images/auburn.png"><br><button class="GArecord" id="GAAU" type="button" onclick="changerecord('GAAU','GAWLT','GAP','AUGA','AUWLT','AUP')">Change</button><label>Auburn</label></td>
         </tr>
         <tr>
-          <td>Kentucky</td>
+          <td><a href="https://ukathletics.com/sports/wsoc/schedule/">Kentucky</a></td>
           <td><p class="UKWLT record">0</p><p class="record">-</p><p class="UKWLT record">0</p><p class="record">-</p><p class="UKWLT record">0</p></td>
           <td id="UKP">0</td>
+          <td id="UKMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/texas_am.png"><br><button class="UKrecord" id="UKAM" type="button" onclick="changerecord('UKAM','UKWLT','UKP','AMUK','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
           <td><img src="resources/images/south_carolina.png"><br><button class="UKrecord" id="UKSC" type="button" onclick="changerecord('UKSC','UKWLT','UKP','SCUK','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
@@ -135,9 +144,10 @@
           <td><img src="resources/images/ole_miss.png"><br><button class="UKrecord" id="UKOM" type="button" onclick="changerecord('UKOM','UKWLT','UKP','OMUK','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
         </tr>
         <tr>
-          <td>LSU</td>
+          <td><a href="https://lsusports.net/sports/sc/schedule/">LSU</a></td>
           <td><p class="LSWLT record">0</p><p class="record">-</p><p class="LSWLT record">0</p><p class="record">-</p><p class="LSWLT record">0</p></td>
           <td id="LSP">0</td>
+          <td id="LSMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/ole_miss.png"><br><button class="LSrecord" id="LSOM" type="button" onclick="changerecord('LSOM','LSWLT','LSP','OMLS','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
           <td><img src="resources/images/georgia.png"><br><button class="LSrecord" id="LSGA" type="button" onclick="changerecord('LSGA','LSWLT','LSP','GALS','GAWLT','GAP')">Change</button><label>Georgia</label></td>
@@ -151,9 +161,10 @@
           <td><img src="resources/images/texas_am.png"><br><button class="LSrecord" id="LSAM" type="button" onclick="changerecord('LSAM','LSWLT','LSP','AMLS','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
         </tr>
         <tr>
-          <td>Mississippi State</td>
+          <td><a href="https://hailstate.com/sports/womens-soccer/schedule/2023">Mississippi State</a></td>
           <td><p class="MTWLT record">0</p><p class="record">-</p><p class="MTWLT record">0</p><p class="record">-</p><p class="MTWLT record">0</p></td>
           <td id="MTP">0</td>
+          <td id="MTMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/auburn.png"><br><button class="MTrecord" id="MTAU" type="button" onclick="changerecord('MTAU','MTWLT','MTP','AUMT','AUWLT','AUP')">Change</button><label>Auburn</label></td>
           <td><img src="resources/images/texas_am.png"><br><button class="MTrecord" id="MTAM" type="button" onclick="changerecord('MTAM','MTWLT','MTP','AMMT','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
@@ -167,9 +178,10 @@
           <td><img src="resources/images/arkansas.png"><br><button class="MTrecord" id="MTAR" type="button" onclick="changerecord('MTAR','MTWLT','MTP','ARMT','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
         </tr>
         <tr>
-          <td>Missouri</td>
+          <td><a href="https://mutigers.com/sports/womens-soccer/schedule/2023">Missouri</a></td>
           <td><p class="MOWLT record">0</p><p class="record">-</p><p class="MOWLT record">0</p><p class="record">-</p><p class="MOWLT record">0</p></td>
           <td id="MOP">0</td>
+          <td id="MOMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/florida.png"><br><button class="MOrecord" id="MOUF" type="button" onclick="changerecord('MOUF','MOWLT','MOP','UFMO','UFWLT','UFP')">Change</button><label>Florida</label></td>
           <td><img src="resources/images/auburn.png"><br><button class="MOrecord" id="MOAU" type="button" onclick="changerecord('MOAU','MOWLT','MOP','AUMO','AUWLT','AUP')">Change</button><label>Auburn</label></td>
@@ -183,9 +195,10 @@
           <td><img src="resources/images/alabama.png"><br><button class="MOrecord" id="MOUA" type="button" onclick="changerecord('MOUA','MOWLT','MOP','UAMO','UAWLT','UAP')">Change</button><label>Alabama</label></td>
         </tr>
         <tr>
-          <td>Ole Miss</td>
+          <td><a href="https://olemisssports.com/sports/womens-soccer/schedule/2023">Ole Miss</a></td>
           <td><p class="OMWLT record">0</p><p class="record">-</p><p class="OMWLT record">0</p><p class="record">-</p><p class="OMWLT record">0</p></td>
           <td id="OMP">0</td>
+          <td id="OMMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/lsu.png"><br><button class="OMrecord" id="OMLS" type="button" onclick="changerecord('OMLS','OMWLT','OMP','LSOM','LSWLT','LSP')">Change</button><label>LSU</label></td>
           <td><img src="resources/images/vanderbilt.png"><br><button class="OMrecord" id="OMVU" type="button" onclick="changerecord('OMVU','OMWLT','OMP','VUOM','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
@@ -199,9 +212,10 @@
           <td><img src="resources/images/kentucky.png"><br><button class="OMrecord" id="OMUK" type="button" onclick="changerecord('OMUK','OMWLT','OMP','UKOM','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
         </tr>
         <tr>
-          <td>South Carolina</td>
+          <td><a href="https://gamecocksonline.com/sports/wsoc/schedule/">South Carolina</a></td>
           <td><p class="SCWLT record">0</p><p class="record">-</p><p class="SCWLT record">0</p><p class="record">-</p><p class="SCWLT record">0</p></td>
           <td id="SCP">0</td>
+          <td id="SCMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/vanderbilt.png"><br><button class="SCrecord" id="SCVU" type="button" onclick="changerecord('SCVU','SCWLT','SCP','VUSC','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
           <td><img src="resources/images/kentucky.png"><br><button class="SCrecord" id="SCUK" type="button" onclick="changerecord('SCUK','SCWLT','SCP','UKSC','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
@@ -215,9 +229,10 @@
           <td><img src="resources/images/florida.png"><br><button class="SCrecord" id="SCUF" type="button" onclick="changerecord('SCUF','SCWLT','SCP','UFSC','UFWLT','UFP')">Change</button><label>Florida</label></td>
         </tr>
         <tr>
-          <td>Tennessee</td>
+          <td><a href="https://utsports.com/sports/womens-soccer/schedule/2023">Tennessee</a></td>
           <td><p class="UTWLT record">0</p><p class="record">-</p><p class="UTWLT record">0</p><p class="record">-</p><p class="UTWLT record">0</p></td>
           <td id="UTP">0</td>
+          <td id="UTMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/arkansas.png"><br><button class="UTrecord" id="UTAR" type="button" onclick="changerecord('UTAR','UTWLT','UTP','ARUT','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
           <td><img src="resources/images/florida.png"><br><button class="UTrecord" id="UTUF" type="button" onclick="changerecord('UTUF','UTWLT','UTP','UFUT','UFWLT','UFP')">Change</button><label>Florida</label></td>
@@ -231,9 +246,10 @@
           <td><img src="resources/images/vanderbilt.png"><br><button class="UTrecord" id="UTVU" type="button" onclick="changerecord('UTVU','UTWLT','UTP','VUUT','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
         </tr>
         <tr>
-          <td>Texas A&M</td>
+          <td><a href="https://12thman.com/sports/womens-soccer/schedule/2023">Texas A&M</a></td>
           <td><p class="AMWLT record">0</p><p class="record">-</p><p class="AMWLT record">0</p><p class="record">-</p><p class="AMWLT record">0</p></td>
           <td id="AMP">0</td>
+          <td id="AMMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/kentucky.png"><br><button class="AMrecord" id="AMUK" type="button" onclick="changerecord('AMUK','AMWLT','AMP','UKAM','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
           <td><img src="resources/images/mississippi_state.png"><br><button class="AMrecord" id="AMMT" type="button" onclick="changerecord('AMMT','AMWLT','AMP','MTAM','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
@@ -247,9 +263,10 @@
           <td><img src="resources/images/lsu.png"><br><button class="AMrecord" id="AMLS" type="button" onclick="changerecord('AMLS','AMWLT','AMP','LSAM','LSWLT','LSP')">Change</button><label>LSU</label></td>
         </tr>
         <tr>
-          <td>Vanderbilt</td>
+          <td><a href="https://vucommodores.com/sports/wsoc/schedule/">Vanderbilt</a></td>
           <td><p class="VUWLT record">0</p><p class="record">-</p><p class="VUWLT record">0</p><p class="record">-</p><p class="VUWLT record">0</p></td>
           <td id="VUP">0</td>
+          <td id="VUMP">30</td>
           <td>?-?</td>
           <td><img src="resources/images/south_carolina.png"><br><button class="VUrecord" id="VUSC" type="button" onclick="changerecord('VUSC','VUWLT','VUP','SCVU','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
           <td><img src="resources/images/ole_miss.png"><br><button class="VUrecord" id="VUOM" type="button" onclick="changerecord('VUOM','VUWLT','VUP','OMVU','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>

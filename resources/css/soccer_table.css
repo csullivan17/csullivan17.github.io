@@ -2,6 +2,10 @@ html {
   font-family: monospace;
 }
 
+.description {
+  text-align: center;
+}
+
 body {
   margin: 0;
 }
