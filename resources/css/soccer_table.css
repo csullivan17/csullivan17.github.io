@@ -1,3 +1,5 @@
+/*Big-Picture*/
+
 html {
   font-family: monospace;
 }
@@ -16,21 +18,6 @@ table {
   vertical-align: middle;
 }
 
-th, td {
-  border: 1px solid black;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.sort_button {
-  background: none;
-  cursor: pointer;
-}
-
-.record {
-  float: left;
-}
-
 .navbar {
     list-style-type: none;
     margin: 0;
@@ -45,23 +32,11 @@ th, td {
   border-right: 1px solid #ccc;
 }
 
-@media screen and (max-width: 600px) {
-  .nav-option {
-    float: none;
-    width: 100%;
-  }
-}
-
-li a {
-  display: block;
-  color: white;
+/*Table Construction*/
+th, td {
+  border: 1px solid black;
+  vertical-align: middle;
   text-align: center;
-  padding: 12px 20px;
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: #111;
 }
 
 .row {
@@ -83,11 +58,33 @@ a:hover {
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+/*Table Specifics*/
+.sort_button {
+  background: none;
+  cursor: pointer;
+  text-align: center;
 }
+
+#max_points {
+  height: 100%;
+}
+
+.record {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #111;
+}
+
 
 img {
   width: 5rem;
@@ -105,4 +102,18 @@ button {
   background-color: white;
   border-radius: 3px;
   border: 1px solid black;
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 600px) {
+  .nav-option {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
