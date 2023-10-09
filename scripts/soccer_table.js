@@ -24,8 +24,15 @@ function changerecord(matchup, WLT, pID, MP, opponent, oppWLT, opppID, oppMP){
   var opplosses = parseInt(oppL.innerText);
   var oppties = parseInt(oppT.innerText);
   var opppoints = 0;
-//Changing letters, adjusting wins/losses/ties,
-  if(recordletter.innerText == "W") {
+//Changing letters and adjusting wins/losses/ties
+if(recordletter.innerText == "Change"){
+  recordletter.innerText = "W";
+  opponentletter.innerText = "L";
+  wins+=1;
+  opplosses+=1;
+  recordletter.style.backgroundColor = '#85E787';
+  opponentletter.style.backgroundColor = '#E78587';
+  } else if(recordletter.innerText == "W") {
     recordletter.innerText = "L";
     opponentletter.innerText = "W";
     losses+=1;
@@ -43,22 +50,13 @@ function changerecord(matchup, WLT, pID, MP, opponent, oppWLT, opppID, oppMP){
     oppwins-=1;
     recordletter.style.backgroundColor = '#B7B7B7';
     opponentletter.style.backgroundColor = '#B7B7B7';
-  } else if(recordletter.innerText == "Change"){
-    recordletter.innerText = "W";
-    opponentletter.innerText = "L";
-    wins+=1;
-    opplosses+=1;
-    recordletter.style.backgroundColor = '#85E787';
-    opponentletter.style.backgroundColor = '#E78587';
-  } else {
-    recordletter.innerText = "W";
-    opponentletter.innerText = "L";
-    wins+=1;
+  } else if(recordletter.innerText =="T") {
+    recordletter.innerText = "Change";
+    opponentletter.innerText = "Change";
     ties-=1;
-    opplosses+=1;
     oppties-=1;
-    recordletter.style.backgroundColor = '#85E787';
-    opponentletter.style.backgroundColor = '#E78587';
+    recordletter.style.backgroundColor = 'white';
+    opponentletter.style.backgroundColor = 'white';
   }
 //Rewriting main team's record, points, and max
   recordW.innerText = wins;
