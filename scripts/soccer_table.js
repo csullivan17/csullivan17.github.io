@@ -1,22 +1,30 @@
-function changerecord(matchup, WLT, pID, opponent, oppWLT, opppID){
+function changerecord(matchup, WLT, pID, MP, opponent, oppWLT, opppID, oppMP){
+//Changing letters
   var recordletter = document.getElementById(matchup);
   var opponentletter = document.getElementById(opponent);
+//Identifying main team's record, points, and max
   var recordW = document.getElementsByClassName(WLT)[0];
   var recordL = document.getElementsByClassName(WLT)[1];
   var recordT = document.getElementsByClassName(WLT)[2];
   var recordP = document.getElementById(pID);
+  var recordM = document.getElementById(MP);
+//Identifying opponent's record, points, and max
   var oppW = document.getElementsByClassName(oppWLT)[0];
   var oppL = document.getElementsByClassName(oppWLT)[1];
   var oppT = document.getElementsByClassName(oppWLT)[2];
   var oppP = document.getElementById(opppID);
+  var oppM = document.getElementById(oppMP);
+//Creating variable integers for main team's record and points
   var wins = parseInt(recordW.innerText);
   var losses = parseInt(recordL.innerText);
   var ties = parseInt(recordT.innerText);
+  var points = 0;
+//Creating variable integers for opponent's record
   var oppwins = parseInt(oppW.innerText);
   var opplosses = parseInt(oppL.innerText);
   var oppties = parseInt(oppT.innerText);
-  var points = 0;
   var opppoints = 0;
+//Changing letters, adjusting wins/losses/ties,
   if(recordletter.innerText == "W") {
     recordletter.innerText = "L";
     opponentletter.innerText = "W";
@@ -52,16 +60,22 @@ function changerecord(matchup, WLT, pID, opponent, oppWLT, opppID){
     recordletter.style.backgroundColor = '#85E787';
     opponentletter.style.backgroundColor = '#E78587';
   }
+//Rewriting main team's record, points, and max
   recordW.innerText = wins;
   recordL.innerText = losses;
   recordT.innerText = ties;
   points = wins*3+ties;
   recordP.innerText = points;
+  max = points + (10-wins-losses-ties)*3;
+  recordM.innerText = max;
+//Rewriting opponent's record, points,s and max
   oppW.innerText = oppwins;
   oppL.innerText = opplosses;
   oppT.innerText = oppties;
   opppoints = oppwins*3+oppties;
   oppP.innerText = opppoints;
+  oppmax = opppoints + (10-oppwins-opplosses-oppties)*3;
+  oppM.innerText = oppmax;
 }
 
 

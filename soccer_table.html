@@ -22,8 +22,7 @@
 <body>
   <div class="row">
       <h2>SEC Soccer Standings</h2>
-      <p class="description">Still a work in progress!</p>
-      <p class="description">Working on calculating max points possible, slimming down the code, and eventually adding some sort of predictive model.</p>
+      <p class="description">Functional, but still a work in progress! Aiming to add some sort of predictive function modeling before next season.</p>
       <table id="soccerTable">
         <tr>
           <th><button class="sort_button" id="name" onclick="sortTable('word',0)">Team</button></th>
@@ -48,16 +47,16 @@
           <td id="UAP">0</td>
           <td id="UAMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/georgia.png"><br><button class="UArecord" id="UAGA" type="button" onclick="changerecord('UAGA','UAWLT','UAP','GAUA','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="UArecord" id="UAAR" type="button" onclick="changerecord('UAAR','UAWLT','UAP','ARUA','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="UArecord" id="UAVU" type="button" onclick="changerecord('UAVU','UAWLT','UAP','VUUA','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="UArecord" id="UAUK" type="button" onclick="changerecord('UAUK','UAWLT','UAP','UKUA','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="UArecord" id="UAAU" type="button" onclick="changerecord('UAAU','UAWLT','UAP','AUUA','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="UArecord" id="UAAM" type="button" onclick="changerecord('UAAM','UAWLT','UAP','AMUA','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="UArecord" id="UALS" type="button" onclick="changerecord('UALS','UAWLT','UAP','LSUA','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="UArecord" id="UAOM" type="button" onclick="changerecord('UAOM','UAWLT','UAP','OMUA','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="UArecord" id="UAMT" type="button" onclick="changerecord('UAMT','UAWLT','UAP','MTUA','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="UArecord" id="UAMO" type="button" onclick="changerecord('UAMO','UAWLT','UAP','MOUA','MOWLT','MOP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="UArecord" id="UAGA" type="button" onclick="changerecord('UAGA','UAWLT','UAP','UAMP','GAUA','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="UArecord" id="UAAR" type="button" onclick="changerecord('UAAR','UAWLT','UAP','UAMP','ARUA','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="UArecord" id="UAVU" type="button" onclick="changerecord('UAVU','UAWLT','UAP','UAMP','VUUA','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="UArecord" id="UAUK" type="button" onclick="changerecord('UAUK','UAWLT','UAP','UAMP','UKUA','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="UArecord" id="UAAU" type="button" onclick="changerecord('UAAU','UAWLT','UAP','UAMP','AUUA','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="UArecord" id="UAAM" type="button" onclick="changerecord('UAAM','UAWLT','UAP','UAMP','AMUA','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="UArecord" id="UALS" type="button" onclick="changerecord('UALS','UAWLT','UAP','UAMP','LSUA','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="UArecord" id="UAOM" type="button" onclick="changerecord('UAOM','UAWLT','UAP','UAMP','OMUA','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="UArecord" id="UAMT" type="button" onclick="changerecord('UAMT','UAWLT','UAP','UAMP','MTUA','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="UArecord" id="UAMO" type="button" onclick="changerecord('UAMO','UAWLT','UAP','UAMP','MOUA','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
         </tr>
         <tr>
           <td><a href="https://arkansasrazorbacks.com/sport/w-soccer/schedule/">Arkansas</a></td>
@@ -65,16 +64,16 @@
           <td id="ARP">0</td>
           <td id="ARMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/tennessee.png"><br><button class="ARrecord" id="ARUT" type="button" onclick="changerecord('ARUT','ARWLT','ARP','UTAR','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="ARrecord" id="ARUA" type="button" onclick="changerecord('ARUA','ARWLT','ARP','UAAR','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="ARrecord" id="ARAM" type="button" onclick="changerecord('ARAM','ARWLT','ARP','AMAR','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="ARrecord" id="ARMO" type="button" onclick="changerecord('ARMO','ARWLT','ARP','MOAR','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="ARrecord" id="ARGA" type="button" onclick="changerecord('ARGA','ARWLT','ARP','GAAR','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="ARrecord" id="ARAU" type="button" onclick="changerecord('ARAU','ARWLT','ARP','AUAR','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="ARrecord" id="ARUF" type="button" onclick="changerecord('ARUF','ARWLT','ARP','UFAR','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="ARrecord" id="ARLS" type="button" onclick="changerecord('ARLS','ARWLT','ARP','LSAR','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="ARrecord" id="AROM" type="button" onclick="changerecord('AROM','ARWLT','ARP','OMAR','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="ARrecord" id="ARMT" type="button" onclick="changerecord('ARMT','ARWLT','ARP','MTAR','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="ARrecord" id="ARUT" type="button" onclick="changerecord('ARUT','ARWLT','ARP','ARMP','UTAR','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="ARrecord" id="ARUA" type="button" onclick="changerecord('ARUA','ARWLT','ARP','ARMP','UAAR','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="ARrecord" id="ARAM" type="button" onclick="changerecord('ARAM','ARWLT','ARP','ARMP','AMAR','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="ARrecord" id="ARMO" type="button" onclick="changerecord('ARMO','ARWLT','ARP','ARMP','MOAR','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="ARrecord" id="ARGA" type="button" onclick="changerecord('ARGA','ARWLT','ARP','ARMP','GAAR','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="ARrecord" id="ARAU" type="button" onclick="changerecord('ARAU','ARWLT','ARP','ARMP','AUAR','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="ARrecord" id="ARUF" type="button" onclick="changerecord('ARUF','ARWLT','ARP','ARMP','UFAR','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="ARrecord" id="ARLS" type="button" onclick="changerecord('ARLS','ARWLT','ARP','ARMP','LSAR','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="ARrecord" id="AROM" type="button" onclick="changerecord('AROM','ARWLT','ARP','ARMP','OMAR','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="ARrecord" id="ARMT" type="button" onclick="changerecord('ARMT','ARWLT','ARP','ARMP','MTAR','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
         </tr>
         <tr>
           <td><a href="https://auburntigers.com/sports/womens-soccer/schedule/2023">Auburn</a></td>
@@ -82,16 +81,16 @@
           <td id="AUP">0</td>
           <td id="AUMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="AUrecord" id="AUMT" type="button" onclick="changerecord('AUMT','AUWLT','AUP','MTAU','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="AUrecord" id="AUMO" type="button" onclick="changerecord('AUMO','AUWLT','AUP','MOAU','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="AUrecord" id="AUOM" type="button" onclick="changerecord('AUOM','AUWLT','AUP','OMAU','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="AUrecord" id="AUSC" type="button" onclick="changerecord('AUSC','AUWLT','AUP','SCAU','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="AUrecord" id="AUUA" type="button" onclick="changerecord('AUUA','AUWLT','AUP','UAAU','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="AUrecord" id="AUAR" type="button" onclick="changerecord('AUAR','AUWLT','AUP','ARAU','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="AUrecord" id="AUAM" type="button" onclick="changerecord('AUAM','AUWLT','AUP','AMAU','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="AUrecord" id="AUUF" type="button" onclick="changerecord('AUUF','AUWLT','AUP','UFAU','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="AUrecord" id="AULS" type="button" onclick="changerecord('AULS','AUWLT','AUP','LSAU','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="AUrecord" id="AUGA" type="button" onclick="changerecord('AUGA','AUWLT','AUP','GAAU','GAWLT','GAP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="AUrecord" id="AUMT" type="button" onclick="changerecord('AUMT','AUWLT','AUP','AUMP','MTAU','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="AUrecord" id="AUMO" type="button" onclick="changerecord('AUMO','AUWLT','AUP','AUMP','MOAU','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="AUrecord" id="AUOM" type="button" onclick="changerecord('AUOM','AUWLT','AUP','AUMP','OMAU','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="AUrecord" id="AUSC" type="button" onclick="changerecord('AUSC','AUWLT','AUP','AUMP','SCAU','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="AUrecord" id="AUUA" type="button" onclick="changerecord('AUUA','AUWLT','AUP','AUMP','UAAU','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="AUrecord" id="AUAR" type="button" onclick="changerecord('AUAR','AUWLT','AUP','AUMP','ARAU','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="AUrecord" id="AUAM" type="button" onclick="changerecord('AUAM','AUWLT','AUP','AUMP','AMAU','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="AUrecord" id="AUUF" type="button" onclick="changerecord('AUUF','AUWLT','AUP','AUMP','UFAU','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="AUrecord" id="AULS" type="button" onclick="changerecord('AULS','AUWLT','AUP','AUMP','LSAU','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="AUrecord" id="AUGA" type="button" onclick="changerecord('AUGA','AUWLT','AUP','AUMP','GAAU','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
         </tr>
         <tr>
           <td><a href="https://floridagators.com/sports/womens-soccer/schedule/2023">Florida</a></td>
@@ -99,16 +98,16 @@
           <td id="UFP">0</td>
           <td id="UFMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/missouri.png"><br><button class="UFrecord" id="UFMO" type="button" onclick="changerecord('UFMO','UFWLT','UFP','MOUF','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="UFrecord" id="UFUT" type="button" onclick="changerecord('UFUT','UFWLT','UFP','UTUF','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="UFrecord" id="UFUK" type="button" onclick="changerecord('UFUK','UFWLT','UFP','UKUF','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="UFrecord" id="UFLS" type="button" onclick="changerecord('UFLS','UFWLT','UFP','LSUF','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="UFrecord" id="UFMT" type="button" onclick="changerecord('UFMT','UFWLT','UFP','MTUF','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="UFrecord" id="UFGA" type="button" onclick="changerecord('UFGA','UFWLT','UFP','GAUF','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="UFrecord" id="UFAR" type="button" onclick="changerecord('UFAR','UFWLT','UFP','ARUF','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="UFrecord" id="UFAU" type="button" onclick="changerecord('UFAU','UFWLT','UFP','AUUF','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="UFrecord" id="UFVU" type="button" onclick="changerecord('UFVU','UFWLT','UFP','VUUF','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="UFrecord" id="UFSC" type="button" onclick="changerecord('UFSC','UFWLT','UFP','SCUF','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="UFrecord" id="UFMO" type="button" onclick="changerecord('UFMO','UFWLT','UFP','UFMP','MOUF','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="UFrecord" id="UFUT" type="button" onclick="changerecord('UFUT','UFWLT','UFP','UFMP','UTUF','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="UFrecord" id="UFUK" type="button" onclick="changerecord('UFUK','UFWLT','UFP','UFMP','UKUF','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="UFrecord" id="UFLS" type="button" onclick="changerecord('UFLS','UFWLT','UFP','UFMP','LSUF','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="UFrecord" id="UFMT" type="button" onclick="changerecord('UFMT','UFWLT','UFP','UFMP','MTUF','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="UFrecord" id="UFGA" type="button" onclick="changerecord('UFGA','UFWLT','UFP','UFMP','GAUF','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="UFrecord" id="UFAR" type="button" onclick="changerecord('UFAR','UFWLT','UFP','UFMP','ARUF','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="UFrecord" id="UFAU" type="button" onclick="changerecord('UFAU','UFWLT','UFP','UFMP','AUUF','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="UFrecord" id="UFVU" type="button" onclick="changerecord('UFVU','UFWLT','UFP','UFMP','VUUF','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="UFrecord" id="UFSC" type="button" onclick="changerecord('UFSC','UFWLT','UFP','UFMP','SCUF','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
         </tr>
         <tr>
           <td><a href="https://georgiadogs.com/sports/womens-soccer/schedule">Georgia</a></td>
@@ -116,16 +115,16 @@
           <td id="GAP">0</td>
           <td id="GAMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/alabama.png"><br><button class="GArecord" id="GAUA" type="button" onclick="changerecord('GAUA','GAWLT','GAP','UAGA','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="GArecord" id="GALS" type="button" onclick="changerecord('GALS','GAWLT','GAP','LSGA','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="GArecord" id="GAMO" type="button" onclick="changerecord('GAMO','GAWLT','GAP','MOGA','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="GArecord" id="GAVU" type="button" onclick="changerecord('GAVU','GAWLT','GAP','VUGA','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="GArecord" id="GAAR" type="button" onclick="changerecord('GAAR','GAWLT','GAP','ARGA','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="GArecord" id="GAUF" type="button" onclick="changerecord('GAUF','GAWLT','GAP','UFGA','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="GArecord" id="GAUT" type="button" onclick="changerecord('GAUT','GAWLT','GAP','UTGA','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="GArecord" id="GAUK" type="button" onclick="changerecord('GAUK','GAWLT','GAP','UKGA','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="GArecord" id="GASC" type="button" onclick="changerecord('GASC','GAWLT','GAP','SCGA','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="GArecord" id="GAAU" type="button" onclick="changerecord('GAAU','GAWLT','GAP','AUGA','AUWLT','AUP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="GArecord" id="GAUA" type="button" onclick="changerecord('GAUA','GAWLT','GAP','GAMP','UAGA','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="GArecord" id="GALS" type="button" onclick="changerecord('GALS','GAWLT','GAP','GAMP','LSGA','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="GArecord" id="GAMO" type="button" onclick="changerecord('GAMO','GAWLT','GAP','GAMP','MOGA','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="GArecord" id="GAVU" type="button" onclick="changerecord('GAVU','GAWLT','GAP','GAMP','VUGA','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="GArecord" id="GAAR" type="button" onclick="changerecord('GAAR','GAWLT','GAP','GAMP','ARGA','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="GArecord" id="GAUF" type="button" onclick="changerecord('GAUF','GAWLT','GAP','GAMP','UFGA','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="GArecord" id="GAUT" type="button" onclick="changerecord('GAUT','GAWLT','GAP','GAMP','UTGA','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="GArecord" id="GAUK" type="button" onclick="changerecord('GAUK','GAWLT','GAP','GAMP','UKGA','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="GArecord" id="GASC" type="button" onclick="changerecord('GASC','GAWLT','GAP','GAMP','SCGA','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="GArecord" id="GAAU" type="button" onclick="changerecord('GAAU','GAWLT','GAP','GAMP','AUGA','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
         </tr>
         <tr>
           <td><a href="https://ukathletics.com/sports/wsoc/schedule/">Kentucky</a></td>
@@ -133,16 +132,16 @@
           <td id="UKP">0</td>
           <td id="UKMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/texas_am.png"><br><button class="UKrecord" id="UKAM" type="button" onclick="changerecord('UKAM','UKWLT','UKP','AMUK','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="UKrecord" id="UKSC" type="button" onclick="changerecord('UKSC','UKWLT','UKP','SCUK','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="UKrecord" id="UKUF" type="button" onclick="changerecord('UKUF','UKWLT','UKP','UFUK','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="UKrecord" id="UKUA" type="button" onclick="changerecord('UKUA','UKWLT','UKP','UAUK','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="UKrecord" id="UKUT" type="button" onclick="changerecord('UKUT','UKWLT','UKP','UTUK','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="UKrecord" id="UKVU" type="button" onclick="changerecord('UKVU','UKWLT','UKP','VUUK','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="UKrecord" id="UKMT" type="button" onclick="changerecord('UKMT','UKWLT','UKP','MTUK','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="UKrecord" id="UKGA" type="button" onclick="changerecord('UKGA','UKWLT','UKP','GAUK','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="UKrecord" id="UKMO" type="button" onclick="changerecord('UKMO','UKWLT','UKP','MOUK','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="UKrecord" id="UKOM" type="button" onclick="changerecord('UKOM','UKWLT','UKP','OMUK','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="UKrecord" id="UKAM" type="button" onclick="changerecord('UKAM','UKWLT','UKP','UKMP','AMUK','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="UKrecord" id="UKSC" type="button" onclick="changerecord('UKSC','UKWLT','UKP','UKMP','SCUK','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="UKrecord" id="UKUF" type="button" onclick="changerecord('UKUF','UKWLT','UKP','UKMP','UFUK','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="UKrecord" id="UKUA" type="button" onclick="changerecord('UKUA','UKWLT','UKP','UKMP','UAUK','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="UKrecord" id="UKUT" type="button" onclick="changerecord('UKUT','UKWLT','UKP','UKMP','UTUK','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="UKrecord" id="UKVU" type="button" onclick="changerecord('UKVU','UKWLT','UKP','UKMP','VUUK','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="UKrecord" id="UKMT" type="button" onclick="changerecord('UKMT','UKWLT','UKP','UKMP','MTUK','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="UKrecord" id="UKGA" type="button" onclick="changerecord('UKGA','UKWLT','UKP','UKMP','GAUK','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="UKrecord" id="UKMO" type="button" onclick="changerecord('UKMO','UKWLT','UKP','UKMP','MOUK','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="UKrecord" id="UKOM" type="button" onclick="changerecord('UKOM','UKWLT','UKP','UKMP','OMUK','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
         </tr>
         <tr>
           <td><a href="https://lsusports.net/sports/sc/schedule/">LSU</a></td>
@@ -150,16 +149,16 @@
           <td id="LSP">0</td>
           <td id="LSMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="LSrecord" id="LSOM" type="button" onclick="changerecord('LSOM','LSWLT','LSP','OMLS','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="LSrecord" id="LSGA" type="button" onclick="changerecord('LSGA','LSWLT','LSP','GALS','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="LSrecord" id="LSMT" type="button" onclick="changerecord('LSMT','LSWLT','LSP','MTLS','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="LSrecord" id="LSUF" type="button" onclick="changerecord('LSUF','LSWLT','LSP','UFLS','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="LSrecord" id="LSSC" type="button" onclick="changerecord('LSSC','LSWLT','LSP','SCLS','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="LSrecord" id="LSUT" type="button" onclick="changerecord('LSUT','LSWLT','LSP','UTLS','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="LSrecord" id="LSUA" type="button" onclick="changerecord('LSUA','LSWLT','LSP','UALS','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="LSrecord" id="LSAR" type="button" onclick="changerecord('LSAR','LSWLT','LSP','ARLS','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="LSrecord" id="LSAU" type="button" onclick="changerecord('LSAU','LSWLT','LSP','AULS','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="LSrecord" id="LSAM" type="button" onclick="changerecord('LSAM','LSWLT','LSP','AMLS','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="LSrecord" id="LSOM" type="button" onclick="changerecord('LSOM','LSWLT','LSP','LSMP','OMLS','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="LSrecord" id="LSGA" type="button" onclick="changerecord('LSGA','LSWLT','LSP','LSMP','GALS','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="LSrecord" id="LSMT" type="button" onclick="changerecord('LSMT','LSWLT','LSP','LSMP','MTLS','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="LSrecord" id="LSUF" type="button" onclick="changerecord('LSUF','LSWLT','LSP','LSMP','UFLS','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="LSrecord" id="LSSC" type="button" onclick="changerecord('LSSC','LSWLT','LSP','LSMP','SCLS','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="LSrecord" id="LSUT" type="button" onclick="changerecord('LSUT','LSWLT','LSP','LSMP','UTLS','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="LSrecord" id="LSUA" type="button" onclick="changerecord('LSUA','LSWLT','LSP','LSMP','UALS','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="LSrecord" id="LSAR" type="button" onclick="changerecord('LSAR','LSWLT','LSP','LSMP','ARLS','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="LSrecord" id="LSAU" type="button" onclick="changerecord('LSAU','LSWLT','LSP','LSMP','AULS','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="LSrecord" id="LSAM" type="button" onclick="changerecord('LSAM','LSWLT','LSP','LSMP','AMLS','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
         </tr>
         <tr>
           <td><a href="https://hailstate.com/sports/womens-soccer/schedule/2023">Mississippi State</a></td>
@@ -167,16 +166,16 @@
           <td id="MTP">0</td>
           <td id="MTMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/auburn.png"><br><button class="MTrecord" id="MTAU" type="button" onclick="changerecord('MTAU','MTWLT','MTP','AUMT','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="MTrecord" id="MTAM" type="button" onclick="changerecord('MTAM','MTWLT','MTP','AMMT','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="MTrecord" id="MTLS" type="button" onclick="changerecord('MTLS','MTWLT','MTP','LSMT','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="MTrecord" id="MTUT" type="button" onclick="changerecord('MTUT','MTWLT','MTP','UTMT','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="MTrecord" id="MTUF" type="button" onclick="changerecord('MTUF','MTWLT','MTP','UFMT','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="MTrecord" id="MTOM" type="button" onclick="changerecord('MTOM','MTWLT','MTP','OMMT','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="MTrecord" id="MTUK" type="button" onclick="changerecord('MTUK','MTWLT','MTP','UKMT','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="MTrecord" id="MTVU" type="button" onclick="changerecord('MTVU','MTWLT','MTP','VUMT','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="MTrecord" id="MTUA" type="button" onclick="changerecord('MTUA','MTWLT','MTP','UAMT','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="MTrecord" id="MTAR" type="button" onclick="changerecord('MTAR','MTWLT','MTP','ARMT','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="MTrecord" id="MTAU" type="button" onclick="changerecord('MTAU','MTWLT','MTP','MTMP','AUMT','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="MTrecord" id="MTAM" type="button" onclick="changerecord('MTAM','MTWLT','MTP','MTMP','AMMT','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="MTrecord" id="MTLS" type="button" onclick="changerecord('MTLS','MTWLT','MTP','MTMP','LSMT','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="MTrecord" id="MTUT" type="button" onclick="changerecord('MTUT','MTWLT','MTP','MTMP','UTMT','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="MTrecord" id="MTUF" type="button" onclick="changerecord('MTUF','MTWLT','MTP','MTMP','UFMT','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="MTrecord" id="MTOM" type="button" onclick="changerecord('MTOM','MTWLT','MTP','MTMP','OMMT','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="MTrecord" id="MTUK" type="button" onclick="changerecord('MTUK','MTWLT','MTP','MTMP','UKMT','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="MTrecord" id="MTVU" type="button" onclick="changerecord('MTVU','MTWLT','MTP','MTMP','VUMT','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="MTrecord" id="MTUA" type="button" onclick="changerecord('MTUA','MTWLT','MTP','MTMP','UAMT','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="MTrecord" id="MTAR" type="button" onclick="changerecord('MTAR','MTWLT','MTP','MTMP','ARMT','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
         </tr>
         <tr>
           <td><a href="https://mutigers.com/sports/womens-soccer/schedule/2023">Missouri</a></td>
@@ -184,16 +183,16 @@
           <td id="MOP">0</td>
           <td id="MOMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/florida.png"><br><button class="MOrecord" id="MOUF" type="button" onclick="changerecord('MOUF','MOWLT','MOP','UFMO','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="MOrecord" id="MOAU" type="button" onclick="changerecord('MOAU','MOWLT','MOP','AUMO','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="MOrecord" id="MOGA" type="button" onclick="changerecord('MOGA','MOWLT','MOP','GAMO','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="MOrecord" id="MOAR" type="button" onclick="changerecord('MOAR','MOWLT','MOP','ARMO','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="MOrecord" id="MOOM" type="button" onclick="changerecord('MOOM','MOWLT','MOP','OMMO','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="MOrecord" id="MOSC" type="button" onclick="changerecord('MOSC','MOWLT','MOP','SCMO','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="MOrecord" id="MOVU" type="button" onclick="changerecord('MOVU','MOWLT','MOP','VUMO','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="MOrecord" id="MOUT" type="button" onclick="changerecord('MOUT','MOWLT','MOP','UTMO','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="MOrecord" id="MOUK" type="button" onclick="changerecord('MOUK','MOWLT','MOP','UKMO','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="MOrecord" id="MOUA" type="button" onclick="changerecord('MOUA','MOWLT','MOP','UAMO','UAWLT','UAP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="MOrecord" id="MOUF" type="button" onclick="changerecord('MOUF','MOWLT','MOP','MOMP','UFMO','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="MOrecord" id="MOAU" type="button" onclick="changerecord('MOAU','MOWLT','MOP','MOMP','AUMO','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="MOrecord" id="MOGA" type="button" onclick="changerecord('MOGA','MOWLT','MOP','MOMP','GAMO','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="MOrecord" id="MOAR" type="button" onclick="changerecord('MOAR','MOWLT','MOP','MOMP','ARMO','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="MOrecord" id="MOOM" type="button" onclick="changerecord('MOOM','MOWLT','MOP','MOMP','OMMO','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="MOrecord" id="MOSC" type="button" onclick="changerecord('MOSC','MOWLT','MOP','MOMP','SCMO','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="MOrecord" id="MOVU" type="button" onclick="changerecord('MOVU','MOWLT','MOP','MOMP','VUMO','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="MOrecord" id="MOUT" type="button" onclick="changerecord('MOUT','MOWLT','MOP','MOMP','UTMO','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="MOrecord" id="MOUK" type="button" onclick="changerecord('MOUK','MOWLT','MOP','MOMP','UKMO','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="MOrecord" id="MOUA" type="button" onclick="changerecord('MOUA','MOWLT','MOP','MOMP','UAMO','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
         </tr>
         <tr>
           <td><a href="https://olemisssports.com/sports/womens-soccer/schedule/2023">Ole Miss</a></td>
@@ -201,16 +200,16 @@
           <td id="OMP">0</td>
           <td id="OMMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/lsu.png"><br><button class="OMrecord" id="OMLS" type="button" onclick="changerecord('OMLS','OMWLT','OMP','LSOM','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="OMrecord" id="OMVU" type="button" onclick="changerecord('OMVU','OMWLT','OMP','VUOM','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="OMrecord" id="OMAU" type="button" onclick="changerecord('OMAU','OMWLT','OMP','AUOM','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="OMrecord" id="OMAM" type="button" onclick="changerecord('OMAM','OMWLT','OMP','AMOM','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="OMrecord" id="OMMO" type="button" onclick="changerecord('OMMO','OMWLT','OMP','MOOM','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="OMrecord" id="OMMT" type="button" onclick="changerecord('OMMT','OMWLT','OMP','MTOM','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="OMrecord" id="OMSC" type="button" onclick="changerecord('OMSC','OMWLT','OMP','SCOM','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="OMrecord" id="OMUA" type="button" onclick="changerecord('OMUA','OMWLT','OMP','UAOM','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="OMrecord" id="OMAR" type="button" onclick="changerecord('OMAR','OMWLT','OMP','AROM','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="OMrecord" id="OMUK" type="button" onclick="changerecord('OMUK','OMWLT','OMP','UKOM','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="OMrecord" id="OMLS" type="button" onclick="changerecord('OMLS','OMWLT','OMP','OMMP','LSOM','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="OMrecord" id="OMVU" type="button" onclick="changerecord('OMVU','OMWLT','OMP','OMMP','VUOM','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="OMrecord" id="OMAU" type="button" onclick="changerecord('OMAU','OMWLT','OMP','OMMP','AUOM','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="OMrecord" id="OMAM" type="button" onclick="changerecord('OMAM','OMWLT','OMP','OMMP','AMOM','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="OMrecord" id="OMMO" type="button" onclick="changerecord('OMMO','OMWLT','OMP','OMMP','MOOM','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="OMrecord" id="OMMT" type="button" onclick="changerecord('OMMT','OMWLT','OMP','OMMP','MTOM','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="OMrecord" id="OMSC" type="button" onclick="changerecord('OMSC','OMWLT','OMP','OMMP','SCOM','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="OMrecord" id="OMUA" type="button" onclick="changerecord('OMUA','OMWLT','OMP','OMMP','UAOM','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="OMrecord" id="OMAR" type="button" onclick="changerecord('OMAR','OMWLT','OMP','OMMP','AROM','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="OMrecord" id="OMUK" type="button" onclick="changerecord('OMUK','OMWLT','OMP','OMMP','UKOM','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
         </tr>
         <tr>
           <td><a href="https://gamecocksonline.com/sports/wsoc/schedule/">South Carolina</a></td>
@@ -218,16 +217,16 @@
           <td id="SCP">0</td>
           <td id="SCMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="SCrecord" id="SCVU" type="button" onclick="changerecord('SCVU','SCWLT','SCP','VUSC','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="SCrecord" id="SCUK" type="button" onclick="changerecord('SCUK','SCWLT','SCP','UKSC','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="SCrecord" id="SCUT" type="button" onclick="changerecord('SCUT','SCWLT','SCP','UTSC','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="SCrecord" id="SCAU" type="button" onclick="changerecord('SCAU','SCWLT','SCP','AUSC','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="SCrecord" id="SCLS" type="button" onclick="changerecord('SCLS','SCWLT','SCP','LSSC','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="SCrecord" id="SCMO" type="button" onclick="changerecord('SCMO','SCWLT','SCP','MOSC','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="SCrecord" id="SCOM" type="button" onclick="changerecord('SCOM','SCWLT','SCP','OMSC','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="SCrecord" id="SCAM" type="button" onclick="changerecord('SCAM','SCWLT','SCP','AMSC','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="SCrecord" id="SCGA" type="button" onclick="changerecord('SCGA','SCWLT','SCP','GASC','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="SCrecord" id="SCUF" type="button" onclick="changerecord('SCUF','SCWLT','SCP','UFSC','UFWLT','UFP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="SCrecord" id="SCVU" type="button" onclick="changerecord('SCVU','SCWLT','SCP','SCMP','VUSC','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="SCrecord" id="SCUK" type="button" onclick="changerecord('SCUK','SCWLT','SCP','SCMP','UKSC','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="SCrecord" id="SCUT" type="button" onclick="changerecord('SCUT','SCWLT','SCP','SCMP','UTSC','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="SCrecord" id="SCAU" type="button" onclick="changerecord('SCAU','SCWLT','SCP','SCMP','AUSC','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="SCrecord" id="SCLS" type="button" onclick="changerecord('SCLS','SCWLT','SCP','SCMP','LSSC','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="SCrecord" id="SCMO" type="button" onclick="changerecord('SCMO','SCWLT','SCP','SCMP','MOSC','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="SCrecord" id="SCOM" type="button" onclick="changerecord('SCOM','SCWLT','SCP','SCMP','OMSC','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="SCrecord" id="SCAM" type="button" onclick="changerecord('SCAM','SCWLT','SCP','SCMP','AMSC','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="SCrecord" id="SCGA" type="button" onclick="changerecord('SCGA','SCWLT','SCP','SCMP','GASC','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="SCrecord" id="SCUF" type="button" onclick="changerecord('SCUF','SCWLT','SCP','SCMP','UFSC','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
         </tr>
         <tr>
           <td><a href="https://utsports.com/sports/womens-soccer/schedule/2023">Tennessee</a></td>
@@ -235,16 +234,16 @@
           <td id="UTP">0</td>
           <td id="UTMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/arkansas.png"><br><button class="UTrecord" id="UTAR" type="button" onclick="changerecord('UTAR','UTWLT','UTP','ARUT','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="UTrecord" id="UTUF" type="button" onclick="changerecord('UTUF','UTWLT','UTP','UFUT','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="UTrecord" id="UTSC" type="button" onclick="changerecord('UTSC','UTWLT','UTP','SCUT','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="UTrecord" id="UTMT" type="button" onclick="changerecord('UTMT','UTWLT','UTP','MTUT','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="UTrecord" id="UTUK" type="button" onclick="changerecord('UTUK','UTWLT','UTP','UKUT','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="UTrecord" id="UTLS" type="button" onclick="changerecord('UTLS','UTWLT','UTP','LSUT','LSWLT','LSP')">Change</button><label>LSU</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="UTrecord" id="UTGA" type="button" onclick="changerecord('UTGA','UTWLT','UTP','GAUT','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="UTrecord" id="UTMO" type="button" onclick="changerecord('UTMO','UTWLT','UTP','MOUT','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="UTrecord" id="UTAM" type="button" onclick="changerecord('UTAM','UTWLT','UTP','AMUT','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="UTrecord" id="UTVU" type="button" onclick="changerecord('UTVU','UTWLT','UTP','VUUT','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="UTrecord" id="UTAR" type="button" onclick="changerecord('UTAR','UTWLT','UTP','UTMP','ARUT','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="UTrecord" id="UTUF" type="button" onclick="changerecord('UTUF','UTWLT','UTP','UTMP','UFUT','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="UTrecord" id="UTSC" type="button" onclick="changerecord('UTSC','UTWLT','UTP','UTMP','SCUT','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="UTrecord" id="UTMT" type="button" onclick="changerecord('UTMT','UTWLT','UTP','UTMP','MTUT','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="UTrecord" id="UTUK" type="button" onclick="changerecord('UTUK','UTWLT','UTP','UTMP','UKUT','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="UTrecord" id="UTLS" type="button" onclick="changerecord('UTLS','UTWLT','UTP','UTMP','LSUT','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="UTrecord" id="UTGA" type="button" onclick="changerecord('UTGA','UTWLT','UTP','UTMP','GAUT','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="UTrecord" id="UTMO" type="button" onclick="changerecord('UTMO','UTWLT','UTP','UTMP','MOUT','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="UTrecord" id="UTAM" type="button" onclick="changerecord('UTAM','UTWLT','UTP','UTMP','AMUT','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="UTrecord" id="UTVU" type="button" onclick="changerecord('UTVU','UTWLT','UTP','UTMP','VUUT','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
         </tr>
         <tr>
           <td><a href="https://12thman.com/sports/womens-soccer/schedule/2023">Texas A&M</a></td>
@@ -252,16 +251,16 @@
           <td id="AMP">0</td>
           <td id="AMMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/kentucky.png"><br><button class="AMrecord" id="AMUK" type="button" onclick="changerecord('AMUK','AMWLT','AMP','UKAM','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="AMrecord" id="AMMT" type="button" onclick="changerecord('AMMT','AMWLT','AMP','MTAM','MTWLT','MTP')">Change</button><label>Mississippi State</label></td>
-          <td><img src="resources/images/arkansas.png"><br><button class="AMrecord" id="AMAR" type="button" onclick="changerecord('AMAR','AMWLT','AMP','ARAM','ARWLT','ARP')">Change</button><label>Arkansas</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="AMrecord" id="AMOM" type="button" onclick="changerecord('AMOM','AMWLT','AMP','OMAM','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/vanderbilt.png"><br><button class="AMrecord" id="AMVU" type="button" onclick="changerecord('AMVU','AMWLT','AMP','VUAM','VUWLT','VUP')">Change</button><label>Vanderbilt</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="AMrecord" id="AMUA" type="button" onclick="changerecord('AMUA','AMWLT','AMP','UAAM','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/auburn.png"><br><button class="AMrecord" id="AMAU" type="button" onclick="changerecord('AMAU','AMWLT','AMP','AUAM','AUWLT','AUP')">Change</button><label>Auburn</label></td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="AMrecord" id="AMSC" type="button" onclick="changerecord('AMSC','AMWLT','AMP','SCAM','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="AMrecord" id="AMUT" type="button" onclick="changerecord('AMUT','AMWLT','AMP','UTAM','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
-          <td><img src="resources/images/lsu.png"><br><button class="AMrecord" id="AMLS" type="button" onclick="changerecord('AMLS','AMWLT','AMP','LSAM','LSWLT','LSP')">Change</button><label>LSU</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="AMrecord" id="AMUK" type="button" onclick="changerecord('AMUK','AMWLT','AMP','AMMP','UKAM','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="AMrecord" id="AMMT" type="button" onclick="changerecord('AMMT','AMWLT','AMP','AMMP','MTAM','MTWLT','MTP','MTMP')">Change</button><label>Mississippi State</label></td>
+          <td><img src="resources/images/arkansas.png"><br><button class="AMrecord" id="AMAR" type="button" onclick="changerecord('AMAR','AMWLT','AMP','AMMP','ARAM','ARWLT','ARP','ARMP')">Change</button><label>Arkansas</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="AMrecord" id="AMOM" type="button" onclick="changerecord('AMOM','AMWLT','AMP','AMMP','OMAM','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/vanderbilt.png"><br><button class="AMrecord" id="AMVU" type="button" onclick="changerecord('AMVU','AMWLT','AMP','AMMP','VUAM','VUWLT','VUP','VUMP')">Change</button><label>Vanderbilt</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="AMrecord" id="AMUA" type="button" onclick="changerecord('AMUA','AMWLT','AMP','AMMP','UAAM','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/auburn.png"><br><button class="AMrecord" id="AMAU" type="button" onclick="changerecord('AMAU','AMWLT','AMP','AMMP','AUAM','AUWLT','AUP','AUMP')">Change</button><label>Auburn</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="AMrecord" id="AMSC" type="button" onclick="changerecord('AMSC','AMWLT','AMP','AMMP','SCAM','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="AMrecord" id="AMUT" type="button" onclick="changerecord('AMUT','AMWLT','AMP','AMMP','UTAM','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/lsu.png"><br><button class="AMrecord" id="AMLS" type="button" onclick="changerecord('AMLS','AMWLT','AMP','AMMP','LSAM','LSWLT','LSP','LSMP')">Change</button><label>LSU</label></td>
         </tr>
         <tr>
           <td><a href="https://vucommodores.com/sports/wsoc/schedule/">Vanderbilt</a></td>
@@ -269,16 +268,16 @@
           <td id="VUP">0</td>
           <td id="VUMP">30</td>
           <td>?-?</td>
-          <td><img src="resources/images/south_carolina.png"><br><button class="VUrecord" id="VUSC" type="button" onclick="changerecord('VUSC','VUWLT','VUP','SCVU','SCWLT','SCP')">Change</button><label>South Carolina</label></td>
-          <td><img src="resources/images/ole_miss.png"><br><button class="VUrecord" id="VUOM" type="button" onclick="changerecord('VUOM','VUWLT','VUP','OMVU','OMWLT','OMP')">Change</button><label>Ole Miss</label></td>
-          <td><img src="resources/images/alabama.png"><br><button class="VUrecord" id="VUUA" type="button" onclick="changerecord('VUUA','VUWLT','VUP','UAVU','UAWLT','UAP')">Change</button><label>Alabama</label></td>
-          <td><img src="resources/images/georgia.png"><br><button class="VUrecord" id="VUGA" type="button" onclick="changerecord('VUGA','VUWLT','VUP','GAVU','GAWLT','GAP')">Change</button><label>Georgia</label></td>
-          <td><img src="resources/images/texas_am.png"><br><button class="VUrecord" id="VUAM" type="button" onclick="changerecord('VUAM','VUWLT','VUP','AMVU','AMWLT','AMP')">Change</button><label>Texas A&M</label></td>
-          <td><img src="resources/images/kentucky.png"><br><button class="VUrecord" id="VUUK" type="button" onclick="changerecord('VUUK','VUWLT','VUP','UKVU','UKWLT','UKP')">Change</button><label>Kentucky</label></td>
-          <td><img src="resources/images/missouri.png"><br><button class="VUrecord" id="VUMO" type="button" onclick="changerecord('VUMO','VUWLT','VUP','MOVU','MOWLT','MOP')">Change</button><label>Missouri</label></td>
-          <td><img src="resources/images/mississippi_state.png"><br><button class="VUrecord" id="VUMT" type="button" onclick="changerecord('VUMT','VUWLT','VUP','MTVU','MTWLT','MTP')">Change</p></button><label>Mississippi State</label></td>
-          <td><img src="resources/images/florida.png"><br><button class="VUrecord" id="VUUF" type="button" onclick="changerecord('VUUF','VUWLT','VUP','UFVU','UFWLT','UFP')">Change</button><label>Florida</label></td>
-          <td><img src="resources/images/tennessee.png"><br><button class="VUrecord" id="VUUT" type="button" onclick="changerecord('VUUT','VUWLT','VUP','UTVU','UTWLT','UTP')">Change</button><label>Tennessee</label></td>
+          <td><img src="resources/images/south_carolina.png"><br><button class="VUrecord" id="VUSC" type="button" onclick="changerecord('VUSC','VUWLT','VUP','VUMP','SCVU','SCWLT','SCP','SCMP')">Change</button><label>South Carolina</label></td>
+          <td><img src="resources/images/ole_miss.png"><br><button class="VUrecord" id="VUOM" type="button" onclick="changerecord('VUOM','VUWLT','VUP','VUMP','OMVU','OMWLT','OMP','OMMP')">Change</button><label>Ole Miss</label></td>
+          <td><img src="resources/images/alabama.png"><br><button class="VUrecord" id="VUUA" type="button" onclick="changerecord('VUUA','VUWLT','VUP','VUMP','UAVU','UAWLT','UAP','UAMP')">Change</button><label>Alabama</label></td>
+          <td><img src="resources/images/georgia.png"><br><button class="VUrecord" id="VUGA" type="button" onclick="changerecord('VUGA','VUWLT','VUP','VUMP','GAVU','GAWLT','GAP','GAMP')">Change</button><label>Georgia</label></td>
+          <td><img src="resources/images/texas_am.png"><br><button class="VUrecord" id="VUAM" type="button" onclick="changerecord('VUAM','VUWLT','VUP','VUMP','AMVU','AMWLT','AMP','AMMP')">Change</button><label>Texas A&M</label></td>
+          <td><img src="resources/images/kentucky.png"><br><button class="VUrecord" id="VUUK" type="button" onclick="changerecord('VUUK','VUWLT','VUP','VUMP','UKVU','UKWLT','UKP','UKMP')">Change</button><label>Kentucky</label></td>
+          <td><img src="resources/images/missouri.png"><br><button class="VUrecord" id="VUMO" type="button" onclick="changerecord('VUMO','VUWLT','VUP','VUMP','MOVU','MOWLT','MOP','MOMP')">Change</button><label>Missouri</label></td>
+          <td><img src="resources/images/mississippi_state.png"><br><button class="VUrecord" id="VUMT" type="button" onclick="changerecord('VUMT','VUWLT','VUP','VUMP','MTVU','MTWLT','MTP','MTMP')">Change</p></button><label>Mississippi State</label></td>
+          <td><img src="resources/images/florida.png"><br><button class="VUrecord" id="VUUF" type="button" onclick="changerecord('VUUF','VUWLT','VUP','VUMP','UFVU','UFWLT','UFP','UFMP')">Change</button><label>Florida</label></td>
+          <td><img src="resources/images/tennessee.png"><br><button class="VUrecord" id="VUUT" type="button" onclick="changerecord('VUUT','VUWLT','VUP','VUMP','UTVU','UTWLT','UTP','UTMP')">Change</button><label>Tennessee</label></td>
         </tr>
       </table>
   <div class="row">
