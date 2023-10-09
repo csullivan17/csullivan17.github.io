@@ -79,11 +79,13 @@ a:hover {
   flex-basis: 10%;
   justify-content: center;
   align-items: center;
+  align-self: center;
   padding-top: 15px;
 }
 
 .pic {
-  width: 30%;
+  width: 20%;
+  min-width: 200px;
   border: 2px solid black;
   border-radius: 40px;
 }
