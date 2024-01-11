@@ -94,6 +94,6 @@ a:hover {
   padding: 0px 50px 0px 50px;
 }
 
-.file {
-  padding-top: 10px;
+#resume {
+  max-width: 1000px;
 }
