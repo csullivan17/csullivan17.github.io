@@ -94,6 +94,9 @@ a:hover {
   padding: 0px 50px 0px 50px;
 }
 
-#resume {
-  max-width: 1000px;
+@media screen and (min-width: 1200px) {
+  #resume {
+    float: none;
+    width: 100%;
+  }
 }
