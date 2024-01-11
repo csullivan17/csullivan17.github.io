@@ -74,7 +74,7 @@ a:hover {
   }
 }
 
-#headshot, #resume {
+#headshot, #intro {
   display: flex;
   flex-basis: 10%;
   justify-content: center;
@@ -90,6 +90,6 @@ a:hover {
   border-radius: 40px;
 }
 
-#resume {
+#intro {
   padding: 0px 50px 0px 50px;
 }
