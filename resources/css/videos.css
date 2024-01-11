@@ -99,3 +99,7 @@ div.desc {
   display: table;
   clear: both;
 }
+
+#highlight_reel {
+  float: none;
+}
