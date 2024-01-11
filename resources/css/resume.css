@@ -74,7 +74,7 @@ a:hover {
   }
 }
 
-#headshot, #intro {
+#headshot, #intro, #resume  {
   display: flex;
   flex-basis: 10%;
   justify-content: center;
