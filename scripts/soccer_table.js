@@ -75,8 +75,7 @@ if(recordletter.innerText == "Change"){
   oppmax = opppoints + (10-oppwins-opplosses-oppties)*3;
   oppM.innerText = oppmax;
 }
-
-
+//Sorting the table based on the three different columns
 function sortTable(type, colIndex) {
   var table, rows, switching, i, x, y, shouldSwitch
   table = document.getElementById("soccerTable")
