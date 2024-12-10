@@ -90,11 +90,10 @@ a:hover {
   border-radius: 40px;
 }
 
-#intro {
+#intro, #links {
   padding: 0px 50px 0px 50px;
 }
 
 #links {
-  padding: 0px 50px 0px 50px;
   text-align: center;
 }
