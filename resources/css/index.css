@@ -74,7 +74,7 @@ a:hover {
   }
 }
 
-#headshot, #intro {
+#headshot, #intro, #links {
   display: flex;
   flex-basis: 10%;
   justify-content: center;
@@ -96,10 +96,5 @@ a:hover {
 
 #links {
   padding: 0px 50px 0px 50px;
-  display: flex;
-  flex-basis: 10%;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
   text-align: center;
 }
